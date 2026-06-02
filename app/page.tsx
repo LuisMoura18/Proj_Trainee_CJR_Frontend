@@ -1,65 +1,58 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+
+export default function TelaFeed() {
+    return (
+      <div className="relative min-h-screen bg-[#F6F3E4]">
+
+        {/* PESSOA */}
+        <img
+          src="/img_cadastro/pessoa_cadastro.png"
+          alt="pessoa da stock.io"
+          width={497}
+          height={1129}
+          className="fixed right-[4.58%] top-[21.68%] w-[25vw] h-auto"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        {/* LOGO */}
+        <img
+          src="/img_cadastro/logo_cadastro.png"
+          alt="logo da stock.io"
+          width={421}
+          height={267}
+          className="fixed right-[7.29%] top-[3%] w-[18vw] h-auto"
+        />
+
+        
+
+            
+          <div className="fixed left-[30%] right-[30%] top-[20%] bottom-[20%] bg-[#171918] rounded-4xl  items-center pl-[5%] pr-[5%] pt-[3%] pb-[3%] shadow-2xl overflow-y-auto card-scroll">
+            <h2 className="text-7xl">
+              protótipo tela feed
+            </h2>
+            
+            <p className="text-left text-white text-lg font-bold pl-[27%] pt-[10%]">
+              redirecionamento tela login{" "}
+              <Link href="/login">
+                <span className="text-[#6A38F3] font-black hover:underline cursor-pointer">
+                  login
+                </span>
+              </Link>
+            </p>
+
+            <p className="text-left text-white text-lg font-bold pl-[20%] pt-[10%]">
+              redirecionamento tela cadastro{" "}
+              <Link href="/cadastro">
+                <span className="text-[#6A38F3] font-black hover:underline cursor-pointer">
+                  cadastro
+                </span>
+              </Link>
+            </p>
+
+          </div>
+
+          
+      </div>
   );
-}
+} 
