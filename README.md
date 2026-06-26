@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🖥️ Fullstack Profile System - Frontend
 
-## Getting Started
+Este é o módulo Frontend de um sistema de gestão de perfis de usuários, responsável pela interface e interação com lojas, produtos e avaliações. A aplicação foi construída utilizando práticas modernas de componentização, controle de estados e consumo de APIs assíncronas.
 
-First, run the development:
-testeeeeeefds
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Next.js** (Framework React com suporte a renderização híbrida e rotas dinâmicas)
+* **React** (Biblioteca para construção de interfaces baseadas em componentes)
+* **TypeScript** (Tipagem estática para maior segurança e previsibilidade do código)
+* **Tailwind CSS** (Estilização baseada em classes utilitárias de alta performance)
+* **Axios** (Cliente HTTP para comunicação com a API do backend)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Funcionalidades Principais
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Perfil Dinâmico:** Renderização de informações do usuário através de rotas dinâmicas baseadas no ID (`/profile/[id]`).
+* **Gerenciamento de Conta:** Modais interativos para edição de dados cadastrais (Nome, Username, Email) e alteração de senha.
+* **Vitrine de Produtos:** Listagem horizontal de produtos cadastrados pelo usuário, com suporte a tratamento de imagens principais.
+* **Módulo de Lojas:** Exibição de lojas associadas ao perfil com suas respectivas categorias e logotipos.
+* **Feed de Avaliações:** Renderização de comentários de produtos vinculados diretamente ao perfil do usuário.
 
-## Learn More
+## 🔧 Estrutura de Arquivos Chave
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* `src/app/profile/[id]/page.tsx`: Tela principal do perfil do usuário contendo a lógica de hooks (`useState`, `useEffect`) e os modais de gerenciamento.
+* `src/api/api.js`: Centralização e configuração das chamadas HTTP utilizando uma instância do Axios conectada ao servidor do backend.
