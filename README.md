@@ -22,3 +22,10 @@ Este é o módulo Frontend de um sistema de gestão de perfis de usuários, resp
 
 * `src/app/profile/[id]/page.tsx`: Tela principal do perfil do usuário contendo a lógica de hooks (`useState`, `useEffect`) e os modais de gerenciamento.
 * `src/api/api.js`: Centralização e configuração das chamadas HTTP utilizando uma instância do Axios conectada ao servidor do backend.
+
+## 👥 Contribuintes / Coautores
+
+Este projeto foi desenvolvido em conjunto com:
+
+* [Guilherme Cauê](https://github.com/caueoliver) 
+* [Gabriel Simplicio](https://github.com/gabrielsimplicioo) 
